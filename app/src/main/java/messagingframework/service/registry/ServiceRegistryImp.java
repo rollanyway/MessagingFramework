@@ -14,6 +14,10 @@ import messagingframework.service.Service;
 
 public class ServiceRegistryImp implements ServiceRegistry{
 
+    public ServiceRegistryImp(){
+        collectServices();
+    }
+
     private Map<String, Class<?>> registry = new HashMap<>();
     private Reflections reflection = new Reflections("messagingframework");
 
